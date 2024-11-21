@@ -30,9 +30,9 @@ fun Navbar() {
     val homeTab = TabBarItem(title = "Home", selectedIcon = Icons.Filled.Home, unselectedIcon = Icons.Outlined.Home)
     val calendarTab = TabBarItem(title = "Calendar", selectedIcon = Icons.Filled.DateRange, unselectedIcon = Icons.Outlined.DateRange)
     val attendanceTab = TabBarItem(title = "Attendance", selectedIcon = Icons.Filled.Place, unselectedIcon = Icons.Outlined.Place)
-    val Profiletab = TabBarItem(title = "Profile", selectedIcon = Icons.Filled.AccountCircle, unselectedIcon = Icons.Outlined.AccountCircle, badgeAmount = 3)
+    val profileTab = TabBarItem(title = "Profile", selectedIcon = Icons.Filled.AccountCircle, unselectedIcon = Icons.Outlined.AccountCircle, badgeAmount = 3)
 
-    val tabBarItems = listOf(homeTab, calendarTab, attendanceTab, Profiletab)
+    val tabBarItems = listOf(homeTab, calendarTab, attendanceTab, profileTab)
 
     val navController = rememberNavController()
 
@@ -51,8 +51,8 @@ fun Navbar() {
                 composable(attendanceTab.title) {
                     Text(attendanceTab.title)
                 }
-                composable(Profiletab.title) {
-                    Text(Profiletab.title)
+                composable(profileTab.title) {
+                    Text(profileTab.title)
                 }
             }
         }
